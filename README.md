@@ -36,5 +36,7 @@
   
     - Add Scraping of JOC.com website --> Currently not included
     - Add modularity in backend for scraping, can have one function which is called depending on each website
+    - Error handling has not been implemented in case of bad response from backend; Hence this will be a major improvement
     - Database for storing the headlines
     - Frontend can be improved in styling
+    - Unit testing of scraping function can be conducted prior to pulling data from backend
