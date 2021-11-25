@@ -26,7 +26,7 @@ const scrapeXinde = async () => {
           const d = {};
           d.headline = $(data).find(".item-title > a").text();
           d.description = $(data).find(".item-text").text();
-          d.date = new Date($(data).find(".item-update ").text().substring(0, 11)).toLocaleDateString();
+          d.date = new Date($(data).find(".item-update ").text().substring(0, 11)).toLocaleDateString('en-GB');
           d.link = baseUrl + $(data).find(".item-title > a").attr("href");
           d.source = "Xinde Marine News";
         //   console.log(d);
@@ -65,7 +65,7 @@ const scrapeGazette = async () => {
           ) {
             return;
           }
-          d.date = new Date($(data).find(".news-date ").text()).toLocaleDateString();
+          d.date = new Date($(data).find(".news-date ").text()).toLocaleDateString('en-GB');
           d.link = baseUrl + "" + k;
           d.source = "Shipping Gazette";
           k += 1;
@@ -106,7 +106,7 @@ const scrapeMaritime = async () => {
               .find(".author-and-date")
               .first()
               .text()
-              .slice(-12)).toLocaleDateString();
+              .slice(-12)).toLocaleDateString('en-GB');
             d.link = baseUrl + $(data).attr("href");
             d.source = "Seatrade Maritime";
             // console.log(d);
