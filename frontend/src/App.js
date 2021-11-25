@@ -91,6 +91,9 @@ const App = () => {
               <AgGridColumn field="description"></AgGridColumn>
               <AgGridColumn
                 field="link"
+                floatingFilter={false}
+                sortable ={false}
+                filter ={false}
                 cellRenderer={(params) => {
                   var link = document.createElement("a");
                   link.href = params.value;
