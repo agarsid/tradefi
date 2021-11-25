@@ -41,6 +41,10 @@ const App = () => {
     gridColumnApi.autoSizeColumns(allColumnIds, skipHeader);
   };
 
+  const onBtnExport = () => {
+    gridApi.exportDataAsCsv();
+  };
+
   return (
     <div style={{ width: "100%", height: "100%" }}>
       <h1>Latest Shipping News</h1>
@@ -60,6 +64,13 @@ const App = () => {
             style={{ width: "5px", height: "auto", display: "inline-block" }}
           />
           <button onClick={() => refreshData()}>Refresh Data</button>
+          <div
+            class="divider"
+            style={{ width: "5px", height: "auto", display: "inline-block" }}
+          />
+          <button onClick={() => onBtnExport()}>
+            Download CSV export file
+          </button>
         </div>
         <div className="grid-wrapper" style={{ flex: "1 1 auto" }}>
           <div
@@ -92,8 +103,8 @@ const App = () => {
               <AgGridColumn
                 field="link"
                 floatingFilter={false}
-                sortable ={false}
-                filter ={false}
+                sortable={false}
+                filter={false}
                 cellRenderer={(params) => {
                   var link = document.createElement("a");
                   link.href = params.value;
