@@ -2,12 +2,16 @@
 
 **Run the backend first**
 
+    cd backend
+    
     npm install (all dependencies are installed)
 
     npm start (starts the backend at localhost:3001)
 
 **Running the frontend**
 
+    cd frontend
+    
     npm install (all dependencies are installed)
 
     npm start (starts the frontend at localhost:3000)
