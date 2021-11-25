@@ -29,12 +29,6 @@ const App = () => {
       .then((rowData) => setRowData(rowData));
   }
 
-  useEffect(() => {
-    fetch("http://localhost:3001/news")
-      .then((result) => result.json())
-      .then((rowData) => setRowData(rowData));
-  }, []);
-
   const sizeToFit = () => {
     gridApi.sizeColumnsToFit();
   };

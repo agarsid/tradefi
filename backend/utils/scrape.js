@@ -124,29 +124,4 @@ const scrapeMaritime = async () => {
   return res
 }
 
-  // request("https://www.joc.com/news", (error, response, html) => {
-  //     if(!error && response.statusCode==200) {
-  //         const $= cheerio.load(html);
-
-  //         // console.log($.html())
-
-  //         const baseUrl = 'https://www.joc.com'
-  //         const datarow= $("#panel-pane .views-field-title a");
-  //         // console.log(datarow.length)
-  //         let k = 1;
-  //         datarow.each((i, data) => {
-  //             console.log(baseUrl + $(data).attr('href'))
-  //         });
-
-  //         //     const headline= $(data).find(".news-head").text();
-  //         //     const description= $(data).find(".news-txt").text();
-  //         //     const date= $(data).find(".news-date ").text();
-  //         //     const link= baseUrl + '' + k;
-  //         //     k+=1
-  //         //     console.log(headline,date,description,link);
-  //         //     console.log("---------------------------------------------------------------")
-  //         // })
-  //     }
-
-  // });
 module.exports = scrapeData
